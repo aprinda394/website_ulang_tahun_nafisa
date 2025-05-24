@@ -1,0 +1,19 @@
+body.dark {
+  background: #111;
+  color: #eee;
+}
+
+body.dark .container {
+  background: #222;
+}
+
+body.dark .message-box {
+  background: #333;
+  color: #ffb6c1;
+}
+
+body.dark input {
+  background: #444;
+  color: white;
+  border: 1px solid #666;
+}

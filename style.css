@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #fff1f8, #ffe0f0);
+  overflow-x: hidden;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #d63384;
+  margin-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #e91e63;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 5px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #c2185b;
+}
+
+.hidden {
+  display: none;
+}
+
+.message-box {
+  background: #fff0f5;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  font-style: italic;
+  color: #880e4f;
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.ucapan input {
+  padding: 8px;
+  margin: 5px;
+  width: 40%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.ucapan ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+  border-top: 1px solid #eee;
+}
+
+.ucapan li {
+  margin: 4px 0;
+  text-align: left;
+}
+
+#cake {
+  font-size: 48px;
+  cursor: pointer;
+  margin: 20px 0;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+#cake.blow {
+  transform: scale(0.8) rotate(-15deg);
+}
+
+#cake.blow::after {
+  content: "💨 Lilin padam!";
+  display: block;
+  font-size: 18px;
+  color: #f06292;
+  animation: fadeOut 2s forwards;
+  margin-top: 10px;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+canvas#snow {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Efek Hujan Hati */
+.heart {
+  position: fixed;
+  top: -10px;
+  color: #ff69b4;
+  font-size: 24px;
+  animation: fall linear forwards;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
